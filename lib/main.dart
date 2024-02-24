@@ -44,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
+        title: Text(widget.title), centerTitle: true,
       ),
       body: Center(
         child: Column(
@@ -56,7 +56,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: (){},tooltip: 'create',child: const Icon(Icons.add)),   
+      floatingActionButton: FloatingActionButton(onPressed: (){},tooltip: 'create',child: const Icon(Icons.add)), floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: const CustomBottomAppBar(),
     );
   }
 }
